@@ -1,0 +1,21 @@
+{
+  "name": "iat-demo",
+  "version": "1.0.0",
+  "description": "iat-demo",
+  "private": true,
+  "scripts": {
+    "client:static-server": "http-server --port 8080 src/",
+    "client:opener-server": "opener http://127.0.0.1:8080",
+    "dev": "npm-run-all --parallel client:*",
+    "build": "babel src/index.js -o dist/index.js"
+  },
+  "author": "iflytek.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "http-server": "^0.11.1",
+    "npm-run-all": "^4.1.5",
+    "opener": "^1.5.1"
+  }
+}
